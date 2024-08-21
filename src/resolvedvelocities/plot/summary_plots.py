@@ -6,7 +6,7 @@ import numpy as np
 import datetime as dt
 import os
 
-def plot_components(utime, ybins, vector, covariance, titles=None, ylabel=None, clim=None, cmap=None, filename=None, scale_factors=None):
+def plot_components(utime, ybins, vector, covariance, titles=None, ylabel=None, yticklabels=None, clim=None, cmap=None, filename=None, scale_factors=None):
 
     # pad time gaps
     utime, [vector, covariance] = timegaps(utime, [vector, covariance])
@@ -65,7 +65,7 @@ def plot_components(utime, ybins, vector, covariance, titles=None, ylabel=None, 
         plt.close(fig)
 
 
-def plot_magnitude(utime, ybins, vmag, dvmag, vdir, dvdir, chi2, err_thres=None, mag_thres=None, titles=None, ylabel=None, clim=None, cmap=None, filename=None):
+def plot_magnitude(utime, ybins, vmag, dvmag, vdir, dvdir, chi2, err_thres=None, mag_thres=None, titles=None, ylabel=None, yticklabels=None, clim=None, cmap=None, filename=None):
 
     # pad time gaps
     utime, [vmag, dvmag, vdir, dvdir, chi2] = timegaps(utime, [vmag, dvmag, vdir, dvdir, chi2])
